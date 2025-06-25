@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+      - sqlite_data:/app/sqlite_data
+    ports:
+      - "8080:8080"
+    environment:
+      DEBUG: "1"
+      DJANGO_SECRET_KEY: supersecretkey
+
+volumes:
+  sqlite_data:
