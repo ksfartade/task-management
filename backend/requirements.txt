@@ -7,3 +7,4 @@ PyJWT==2.9.0
 python-decouple==3.8
 sqlparse==0.5.3
 gunicorn
+django-cors-headers
