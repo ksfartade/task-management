@@ -286,3 +286,65 @@ cron(30 14 * * ? *)  # IST 8:00 PM = UTC 2:30 PM
 4. Target: **stop lambda function**
 
 ---
+
+
+
+# 🧠 Task Manager Frontend (React)
+
+A React.js frontend application to manage tasks, register/login users, and interact with the Django backend using JWT authentication.
+
+---
+
+## 🚀 Tech Stack
+
+- **React.js** (via Create React App)
+- **React Router DOM** – client-side routing
+- **Axios** – for API requests
+- **JWT Auth** – handled via localStorage
+
+---
+
+## 📦 Setup & Run
+
+1. Clone the repo and install dependencies:
+   ```bash
+   cd frontend
+   npm install
+````
+
+2. Create a `.env` file:
+
+   ```env
+   REACT_APP_API_BASE_URL=http://<your-ec2-ip-or-domain>/api
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+---
+
+## 🔐 Routes
+
+| Path        | Page            | Auth Required |
+| ----------- | --------------- | ------------- |
+| `/register` | Register        | ❌ No          |
+| `/login`    | Login           | ❌ No          |
+| `/tasks`    | Task Management | ✅ Yes         |
+
+---
+
+---
+
+## 🌐 API Endpoints (used)
+
+* `POST /users/register/` – Register user
+* `POST /users/login/` – Login, receive JWT
+* `GET /tasks/` – List tasks (with ?status=)
+* `POST /tasks/` – Create task
+* `PUT /tasks/:id/` – Update task
+* `DELETE /tasks/:id/` – Delete task
+
+---
