@@ -8,6 +8,7 @@ services:
       - sqlite_data:/app/sqlite_data
     ports:
       - "80:8080"
+    restart: always   
     environment:
       DEBUG: "1"
       DJANGO_SECRET_KEY: supersecretkey
