@@ -348,3 +348,33 @@ A React.js frontend application to manage tasks, register/login users, and inter
 * `DELETE /tasks/:id/` – Delete task
 
 ---
+
+
+## 🌍 Frontend Deployment (Netlify)
+
+Steps to deploy the frontend on [Netlify](https://netlify.com):
+
+---
+
+### ✅ Steps
+
+1. **Push Code to GitHub**
+   - Ensure your `frontend/` directory is committed to GitHub.
+
+2. **Create Netlify Site**
+   - Log in to Netlify → "Add New Site" → Import from GitHub
+   - Choose your repo and set directory (if monorepo: use `frontend` as base)
+
+3. **Build Settings**
+   | Setting           | Value         |
+   |------------------|---------------|
+   | Build Command    | `npm run build` |
+   | Publish Directory| `build`       |
+   | Base Directory   | `frontend` (if using monorepo)
+
+4. **Add Environment Variable**
+   - Go to **Site Settings → Environment Variables**
+   - Add:
+     ```
+     REACT_APP_API_BASE_URL=https://<your-ec2-backend-ip>/api
+     ```
