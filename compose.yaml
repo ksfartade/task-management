@@ -7,7 +7,7 @@ services:
       - ./backend:/app
       - sqlite_data:/app/sqlite_data
     ports:
-      - "8080:8080"
+      - "80:8080"
     environment:
       DEBUG: "1"
       DJANGO_SECRET_KEY: supersecretkey
