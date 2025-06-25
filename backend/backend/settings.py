@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React dev server
-    "http://<your-ec2-ip>",   # frontend production server
+    "https://685bb1754300639da6473efe--phenomenal-kringle-e70ccb.netlify.app/",   # frontend production server
 ]
 
 # Application definition
