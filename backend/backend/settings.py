@@ -27,10 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React dev server
-    "https://685bb1754300639da6473efe--phenomenal-kringle-e70ccb.netlify.app/",   # frontend production server
-]
+CORS_ALLOWED_ORIGINS = ["*"]
 
 # Application definition
 
