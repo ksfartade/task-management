@@ -44,9 +44,9 @@ function TaskList() {
     }
   };
 
-  const handleStatusChange = async (id, newStatus) => {
+  const handleStatusChange = async (id, newStatus, title) => {
     try {
-      await axios.put(`/tasks/${id}/`, { status: newStatus });
+      await axios.put(`/tasks/${id}/`, { status: newStatus, title: title});
       fetchTasks(filterStatus);
     } catch (err) {
       alert('Update failed');
@@ -84,7 +84,7 @@ function TaskList() {
             <strong>{task.title}</strong> — {task.description} [{task.status}]
             <select
               value={task.status}
-              onChange={(e) => handleStatusChange(task.id, e.target.value)}
+              onChange={(e) => handleStatusChange(task.id, e.target.value, task.title)}
             >
               <option>To Do</option>
               <option>In Progress</option>
